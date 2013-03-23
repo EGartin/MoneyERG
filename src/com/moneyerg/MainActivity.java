@@ -15,17 +15,25 @@ public class MainActivity extends Activity {
     private Button button;
     private Editable hoursWorked;
     private Editable wageRate;
+    private double overtimeRate;
+    private double result;
+	private double wageRateNum;
+	private double hoursWorkedNum;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {    	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        
         EditText text = (EditText) findViewById(R.id.hoursWorked);
         hoursWorked = text.getText();
-
+        hoursWorkedNum = Double.parseDouble(hoursWorked.toString());
+        
         EditText text1 = (EditText) findViewById(R.id.wageAmount);
         wageRate = text1.getText();
+        wageRateNum = Double.parseDouble(wageRate.toString());
+        overtimeRate = wageRateNum*1.5;
 
         button = (Button) findViewById(R.id.calculateButton);
 
@@ -34,8 +42,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
 
-                double result = Double.parseDouble(hoursWorked.toString()) * Double.parseDouble(wageRate.toString());
-
+            	if(hoursWorkedNum <= 40){
+            		result = hoursWorkedNum * wageRateNum;
+            	}
+            	else if (hoursWorkedNum > 40){
+            		result = hoursWorkedNum * overtimeRate;	
+            	}
                 // Toast.makeText(getApplicationContext(), "$$$: " + result,
                 // Toast.LENGTH_LONG).show();
 
