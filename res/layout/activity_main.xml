@@ -22,7 +22,7 @@
         android:layout_marginTop="106dp"
         android:layout_toRightOf="@+id/bannerText"
         android:ems="10"
-        android:inputType="numberDecimal" >
+        android:inputType="number" >
 
         <requestFocus />
     </EditText>
@@ -46,7 +46,7 @@
         android:layout_below="@+id/hoursWorkedText"
         android:layout_marginTop="47dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/WageRateText"
