@@ -8,71 +8,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Dat Money" />
-
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/hoursWorked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="106dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="166dp"
+        android:layout_marginRight="48dp"
         android:ems="10"
-        android:inputType="numberDecimal" >
+        android:inputType="number" >
 
         <requestFocus />
     </EditText>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/textView1"
-        android:text="Hours Worked" />
-
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/wageAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="47dp"
+        android:layout_above="@+id/hoursWorked"
+        android:layout_alignRight="@+id/hoursWorked"
         android:ems="10"
-        android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText2"
-        android:layout_alignBottom="@+id/editText2"
-        android:layout_alignLeft="@+id/textView2"
-        android:text="Wage Rate" />
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:text="Calculate" />
+        android:layout_alignLeft="@+id/hoursWorked"
+        android:layout_alignTop="@+id/hoursWorked"
+        android:layout_marginTop="69dp"
+        android:text="@string/calc" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/totalWages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="Total Wages" />
+        android:layout_alignRight="@+id/calculateButton"
+        android:layout_below="@+id/calculateButton"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/totalWages" />
 
 </RelativeLayout>
