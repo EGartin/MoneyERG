@@ -17,6 +17,7 @@
         android:layout_marginBottom="166dp"
         android:layout_marginRight="48dp"
         android:ems="10"
+        android:hint="Hours Worked"
         android:inputType="number|numberDecimal" >
 
         <requestFocus />
@@ -49,22 +50,23 @@
         android:layout_alignLeft="@+id/hoursWorked"
         android:layout_marginBottom="58dp"
         android:ems="10"
+        android:hint="Hourly Rate"
         android:inputType="number|numberDecimal" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/wageAmount"
-        android:layout_alignLeft="@+id/wageAmount"
-        android:text="Hours Worked" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/hoursWorked"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/wageAmount"
+        android:layout_alignLeft="@+id/wageAmount"
         android:text="Hourly Rate" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hoursWorked"
+        android:layout_alignLeft="@+id/hoursWorked"
+        android:text="Hours Worked" />
 
 </RelativeLayout>
