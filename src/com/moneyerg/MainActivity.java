@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
           result = hw * wr;
         } else {
           // first 40 hours @ normal wage + remaining OT hours at time & half
-          result = (hw * wr) + ((hw - 40) * (wr * 1.5));
+          result = (40 * wr) + ((hw - 40) * (wr * 1.5));
         }
 
         // Toast.makeText(getApplicationContext(), "REGULAR TIME: " + result,
